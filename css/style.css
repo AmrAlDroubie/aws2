@@ -1,0 +1,396 @@
+/* Main  Rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    direction: rtl;
+    font-family: "Cairo", "sans-serif";
+    background-color: #fafafa;
+}
+
+:root {
+    --clr-primary: #d60011;
+    --clr-secondry: #ee7a00;
+    --tran-primary: 0.4s;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    background-color: var(--clr-primary);
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--clr-secondry);
+}
+
+
+/* ===== Main Classes ===== */
+
+
+/* Colors */
+
+.clr-primary {
+    color: var(--clr-primary) !important;
+}
+
+.clr-secondry {
+    color: var(--clr-secondry);
+}
+
+.back-primary {
+    background-color: var(--clr-primary);
+}
+
+.back-secondry {
+    background-color: var(--clr-secondry);
+}
+
+.back-dark {
+    background-color: #222222;
+}
+
+.light-text {
+    color: #818181;
+}
+
+
+/* border */
+
+.border-primary {
+    border: 1px solid var(--clr-primary) !important;
+}
+
+
+/* Some Classes */
+
+.under-line-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: var(--clr-secondry);
+    border-radius: 3px;
+    display: block;
+    margin: auto;
+}
+
+.index--1 {
+    z-index: -1;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/* centered with position  */
+
+.center-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* centered with flex */
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ============== Navbar =============== */
+
+.top-nav {
+    background-color: #d60011;
+}
+
+.navbar {
+    background-color: #80050e;
+    padding: 11px 0;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.nav-en,
+.nav-search {
+    background-color: #a0444b;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    color: #fff !important;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.header-text p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    color: #fff;
+}
+
+.header-text a {
+    background-color: #222222;
+    transition: var(--tran-primary);
+    color: #fff;
+    padding: 9px 60px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 14px;
+}
+
+.header-text a:hover {
+    background-color: var(--clr-secondry);
+}
+
+.header-content .swiper-slide {
+    min-height: 600px;
+    padding: 50px;
+}
+
+.header-content .swiper-slide>img {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    z-index: -1;
+}
+
+.header-pagination {
+    position: absolute;
+    bottom: 145px;
+    right: 76px;
+}
+
+.swiper-pagination-bullet {
+    width: 48px;
+    height: 7px;
+    border-radius: 3.5px;
+    background: #fff;
+    opacity: 0.34;
+    display: block;
+    z-index: 333;
+    position: relative;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+
+/* ====================== Our Feats ===================== */
+
+.our-feats {
+    transform: translateY(-100px);
+    position: relative;
+    z-index: 333;
+}
+
+.our-feats-box {
+    text-align: center;
+    min-height: 339px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    background-image: url("../images/our_feats_box_img.svg");
+    background-position-x: -25px;
+    background-position-y: left;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    border-bottom: 10px solid var(--clr-secondry);
+}
+
+.our-feats-box .image {
+    min-height: 80px;
+}
+
+.our-feats-box h3 {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 71px;
+    color: #222;
+    margin-top: 100px;
+}
+
+.our-feats-box a {
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background: #d60011;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    color: #fff;
+}
+
+
+/* ====================== about us ===================== */
+
+.about-us {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.about-us::before {
+    content: "";
+    height: 50%;
+    background-color: var(--clr-primary);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.about-us-next,
+.about-us-prev {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    z-index: 333;
+}
+
+.aboutus-pag .swiper-pagination-bullet {
+    width: 17px;
+    height: 17px;
+    display: inline-flex;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid #fff;
+    margin-left: 10px;
+}
+
+.aboutus-pag .swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.about-us-prev {}
+
+.about-us .swiper-slide img {
+    width: 98%;
+}
+
+
+/* ====================== dezel prices ===================== */
+
+.dezel-prices {
+    background-image: url("../images/dizel_prices_back.png");
+    background-size: cover;
+    min-height: 475px;
+}
+
+.dezel-prices-box {
+    background-color: rgba(255, 255, 255, 25%);
+    text-align: center;
+    padding: 65px 15px;
+    border-radius: 26px;
+    margin-bottom: 35px;
+}
+
+.dezel-prices-box .image {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+
+/* ====================== Our Services  ===================== */
+
+.our-services-box {
+    margin-bottom: 25px;
+}
+
+
+/* ====================== App =========================== */
+
+.app .col-12 {
+    padding: 0 !important;
+}
+
+.app .col-12:first-of-type .app-part {
+    background-image: url("../images/app_part1.png");
+}
+
+.app-part {
+    min-height: 720px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.app .col-12:nth-of-type(2) .app-part {
+    background-image: url("../images/app_part2.png");
+}
+
+
+/* ====================== Blog section ===================== */
+
+.blog-box {
+    max-width: 380px;
+    height: 489px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.blog-box img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* ========================== Footer ===================== */
+
+.footer .col-12 {
+    margin-bottom: 35px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    background-color: #5a5a5a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
